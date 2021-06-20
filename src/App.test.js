@@ -35,7 +35,7 @@ test("Checkbox toggles buttons disable property", () => {
   render(<App />);
 
   // Firing the checkbox click
-  const checkBox = screen.getByRole("checkbox");
+  const checkBox = screen.getByRole("checkbox", { name: /disable button/i });
   const colorButton = screen.getByRole("button", { name: /change to blue/i });
 
   expect(checkBox).not.toBeChecked();
